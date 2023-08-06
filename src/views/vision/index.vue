@@ -92,7 +92,6 @@ import Footer from '@/components/Footer.vue'
   <Features />
   <Security />
   <Routers />
-  <Footer />
 </template>
 
 <style scoped lang="scss"></style>
