@@ -24,12 +24,13 @@ for (let i = 0; i < frameCount; i++) {
 }
 
 function render(context: any) {
-  var canvas = context.canvas
-  var hRatio = canvas.width / images[vision.frame].width
-  var vRatio = canvas.height / images[vision.frame].height
-  var ratio = Math.min(hRatio, vRatio)
-  var centerShift_x = (canvas.width - images[vision.frame].width * ratio) / 2
-  var centerShift_y = (canvas.height - images[vision.frame].height * ratio) / 2
+  let canvas = context.canvas
+  let hRatio = canvas.width / images[vision.frame].width
+  let vRatio = canvas.height / images[vision.frame].height
+  let ratio = Math.min(hRatio, vRatio)
+  let centerShift_x = (canvas.width - images[vision.frame].width * ratio) / 2
+  let centerShift_y = (canvas.height - images[vision.frame].height * ratio) / 2
+
   context.clearRect(0, 0, canvas.width, canvas.height)
   context.drawImage(
     images[vision.frame],
