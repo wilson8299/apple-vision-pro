@@ -1,0 +1,40 @@
+$lg: 1280px;
+$md: 980px;
+$sm: 768px;
+$xs: 480px;
+$color: red;
+
+@mixin breakpoint($size) {
+  @if $size == xs {
+    @media (max-width: $xs) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (max-width: $sm) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (max-width: $md) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $lg) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  display: flex;
+  margin: 0 auto;
+  max-width: $md;
+  flex-wrap: wrap;
+
+  @media (max-width: $md) {
+    max-width: $sm;
+  }
+
+  @media (max-width: $xs) {
+    max-width: $xs;
+  }
+}
