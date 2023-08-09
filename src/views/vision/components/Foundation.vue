@@ -40,6 +40,7 @@ onMounted(() => {
         trigger: foundationRef.value,
         start: 'top top',
         pin: true,
+        anticipatePin: 1,
         scrub: 0.5
       }
     })
