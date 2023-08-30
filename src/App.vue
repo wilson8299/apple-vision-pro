@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
-import Footer from '@/components/Footer.vue'
-import Loading from '@/components/Loading.vue'
-import Vision from '@/views/vision/index.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+import LoadingComponent from '@/components/LoadingComponent.vue'
+import VisionView from '@/views/vision/index.vue'
 
 const isLoading = ref(true)
 
@@ -20,11 +20,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Loading :is-loading="isLoading" />
+  <loading-component :is-loading="isLoading" />
   <main>
-    <Vision />
+    <vision-view />
   </main>
-  <Footer />
+  <footer-component />
 </template>
 
 <style scoped></style>

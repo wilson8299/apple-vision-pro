@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { getLocalImg } from '@/utils/getResources'
-import Button from '@/components/Button.vue'
+import ButtonComponent from '@/components/ButtonComponent.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -131,8 +131,8 @@ onUnmounted(() => {
       </p>
     </div>
     <div class="features__more">
-      <Button bg-color="#ffffff" hover-bg-color="#d4d4d4" font-color="#000000"
-        ><slot name="more" />Learn more about technology</Button
+      <button-component bg-color="#ffffff" hover-bg-color="#d4d4d4" font-color="#000000"
+        ><slot name="more" />Learn more about technology</button-component
       >
     </div>
   </section>

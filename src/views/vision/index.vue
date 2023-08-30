@@ -1,40 +1,40 @@
 <script setup lang="ts">
 import { getLocalVideo } from '@/utils/getResources'
-import Header from './components/Header.vue'
-import Figure from './components/Figure.vue'
-import Foundation from './components/Foundation.vue'
-import Intro from './components/Intro.vue'
-import Experiences from './components/Experiences.vue'
-import Design from './components/Design.vue'
-import Environment from './components/Environment.vue'
-import Technology from './components/Technology.vue'
-import Speaker from './components/Speaker.vue'
-import Features from './components/Features.vue'
-import Security from './components/Security.vue'
-import Routers from './components/Routers.vue'
-import Footer from '@/components/Footer.vue'
+import VisionHeader from './components/VisionHeader.vue'
+import VisionFigure from './components/VisionFigure.vue'
+import VisionFoundation from './components/VisionFoundation.vue'
+import VisionIntro from './components/VisionIntro.vue'
+import VisionExperiences from './components/VisionExperiences.vue'
+import VisionDesign from './components/VisionDesign.vue'
+import VisionEnvironment from './components/VisionEnvironment.vue'
+import VisionTechnology from './components/VisionTechnology.vue'
+import VisionSpeaker from './components/VisionSpeaker.vue'
+import VisionFeatures from './components/VisionFeatures.vue'
+import VisionSecurity from './components/VisionSecurity.vue'
+import VisionRouters from './components/VisionRouters.vue'
 </script>
 
 <template>
-  <Header />
-  <Figure />
+  <vision-header />
+  <vision-figure />
   <section>
-    <Foundation :videoSrc="getLocalVideo('foundation/spatial_computing.webm')"
-      >Welcome to the era of spatial computing.</Foundation
+    <vision-foundation :videoSrc="getLocalVideo('foundation/spatial_computing.webm')"
+      >Welcome to the era of spatial computing.</vision-foundation
     >
-    <Foundation :videoSrc="getLocalVideo('foundation/digital_canvas.webm')"
-      >Apple Vision Pro seamlessly blends digital content with your physical space.</Foundation
+    <vision-foundation :videoSrc="getLocalVideo('foundation/digital_canvas.webm')"
+      >Apple Vision Pro seamlessly blends digital content with your physical
+      space.</vision-foundation
     >
-    <Foundation :videoSrc="getLocalVideo('foundation/inputs.webm')"
-      >You navigate simply by using your eyes, hands, and voice.</Foundation
+    <vision-foundation :videoSrc="getLocalVideo('foundation/inputs.webm')"
+      >You navigate simply by using your eyes, hands, and voice.</vision-foundation
     >
-    <Foundation :videoSrc="getLocalVideo('foundation/entertainment.webm')"
-      >So you can do the things you love in ways never before possible.</Foundation
+    <vision-foundation :videoSrc="getLocalVideo('foundation/entertainment.webm')"
+      >So you can do the things you love in ways never before possible.</vision-foundation
     >
   </section>
-  <Intro />
+  <vision-intro />
   <section>
-    <Experiences :videoSrc="getLocalVideo('experiences/apps.webm')">
+    <vision-experiences :videoSrc="getLocalVideo('experiences/apps.webm')">
       <template v-slot:eyebrow>Apps</template>
       <template v-slot:headline>Free your desktop.<br />And your apps will follow.</template>
       <template v-slot:subheadline>Your apps live in your space.</template>
@@ -46,8 +46,8 @@ import Footer from '@/components/Footer.vue'
         with a glance.</template
       >
       <template v-slot:more>Learn more about apps</template>
-    </Experiences>
-    <Experiences :videoSrc="getLocalVideo('experiences/entertainment.webm')">
+    </vision-experiences>
+    <vision-experiences :videoSrc="getLocalVideo('experiences/entertainment.webm')">
       <template v-slot:eyebrow>Entertainment</template>
       <template v-slot:headline>The ultimate theater.<br />Wherever you are.</template>
       <template v-slot:subheadline>An immersive way to experience entertainment.</template>
@@ -58,8 +58,8 @@ import Footer from '@/components/Footer.vue'
         content wherever you are — whether that’s a long flight or the couch at home.</template
       >
       <template v-slot:more>Learn more about entertainment</template>
-    </Experiences>
-    <Experiences :videoSrc="getLocalVideo('experiences/photos_videos.webm')">
+    </vision-experiences>
+    <vision-experiences :videoSrc="getLocalVideo('experiences/photos_videos.webm')">
       <template v-slot:eyebrow>Photos and Videos</template>
       <template v-slot:headline>Be in the moment.<br />All over again.</template>
       <template v-slot:subheadline>Your memories come alive.</template>
@@ -71,8 +71,8 @@ import Footer from '@/components/Footer.vue'
         them.</template
       >
       <template v-slot:more>Learn more about photos and videos</template>
-    </Experiences>
-    <Experiences :videoSrc="getLocalVideo('experiences/connection.webm')">
+    </vision-experiences>
+    <vision-experiences :videoSrc="getLocalVideo('experiences/connection.webm')">
       <template v-slot:eyebrow>Connection</template>
       <template v-slot:headline>Get on the same page.<br />In the same space.</template>
       <template v-slot:subheadline>Make meetings more meaningful.</template>
@@ -83,15 +83,15 @@ import Footer from '@/components/Footer.vue'
         simultaneously.</template
       >
       <template v-slot:more>Learn more about connection</template>
-    </Experiences>
+    </vision-experiences>
   </section>
-  <Design />
-  <Environment />
-  <Technology />
-  <Speaker />
-  <Features />
-  <Security />
-  <Routers />
+  <vision-design />
+  <vision-environment />
+  <vision-technology />
+  <vision-speaker />
+  <vision-features />
+  <vision-security />
+  <vision-routers />
 </template>
 
 <style scoped lang="scss"></style>

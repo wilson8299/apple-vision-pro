@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, ref, computed } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { getLocalImg } from '@/utils/getResources'
-import Button from '@/components/Button.vue'
+import ButtonComponent from '@/components/ButtonComponent.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -44,7 +44,7 @@ onUnmounted(() => {
       new technologies like Optic ID, a secure authentication system that uses the uniqueness of
       your iris.
     </p>
-    <Button>Learn more about privacy and security</Button>
+    <button-component>Learn more about privacy and security</button-component>
   </section>
 </template>
 

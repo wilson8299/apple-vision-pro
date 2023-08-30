@@ -2,7 +2,7 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Button from '@/components/Button.vue'
+import ButtonComponent from '@/components/ButtonComponent.vue'
 
 defineProps({
   videoSrc: {
@@ -99,7 +99,7 @@ onUnmounted(() => {
           <p class="experiences__paragraph">
             <slot name="paragraph" />
           </p>
-          <Button @click="handleVideoClick"><slot name="more" /></Button>
+          <button-component @click="handleVideoClick"><slot name="more" /></button-component>
         </div>
       </div>
     </div>
